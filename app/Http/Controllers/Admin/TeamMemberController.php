@@ -17,7 +17,7 @@ class TeamMemberController extends Controller
     {
         $teamMembers = TeamMember::paginate(10);
         
-        return view('admin.team.index', compact('teamMembers'));
+        return view('admin.teams.index', compact('teamMembers'));
     }
 
     /**
@@ -25,7 +25,7 @@ class TeamMemberController extends Controller
      */
     public function create()
     {
-        return view('admin.team.create');
+        return view('admin.teams.create');
     }
 
     /**
@@ -69,7 +69,7 @@ class TeamMemberController extends Controller
     {
         $teamMember = TeamMember::findOrFail($id);
         
-        return view('admin.team.edit', compact('teamMember'));
+        return view('admin.teams.edit', compact('teamMember'));
     }
 
     /**
